@@ -1,0 +1,6 @@
+C:\711\BackendService\bin\BackendService.dll.config
+C:\711\BackendService\bin\BackendService.dll
+C:\711\BackendService\bin\BackendService.pdb
+C:\711\BackendService\obj\Debug\BackendService.csprojResolveAssemblyReference.cache
+C:\711\BackendService\obj\Debug\BackendService.dll
+C:\711\BackendService\obj\Debug\BackendService.pdb
