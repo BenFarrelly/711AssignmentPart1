@@ -66,20 +66,26 @@ namespace BackendService
             return composite;
         }
 
-        public Stream downloadFile(string fileName, string fileExtension)
+        public Stream downloadFile(string fileName)
         {
             //Sends text file encoded into JSON to the client
             //file: Filename in string format.
-            string downloadFilePath = "./" + fileName + "." + fileExtension;
-            //This line might not be needed -- assumed file is already there
-            File.Create(downloadFilePath);
+            string downloadFilePath = "C:\\711\\files\\" + fileName;
+            if (File.Exists(downloadFilePath))
+            {
+                //This line might not be needed -- assumed file is already there
+               // File.Create(downloadFilePath);
 
-            string headerInfo = "attachment; filename=" + fileName + "." + fileExtension;
-            WebOperationContext.Current.OutgoingResponse.Headers["Content-Disposition"] = headerInfo;
+                string headerInfo = "attachment; filename=" + fileName;
+                WebOperationContext.Current.OutgoingResponse.Headers["Content-Disposition"]
+                    = headerInfo;
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "application/octet-stream";
+                WebOperationContext.Current.OutgoingResponse.ContentType
+                    = "application/octet-stream";
 
-            return File.OpenRead(downloadFilePath);
+                return File.OpenRead(downloadFilePath);
+            }
+            return null;
         }
     }
     class Program

@@ -25,8 +25,9 @@ namespace BackendService
         List<string> GetAvailableFilenames();
 
         [OperationContract]
-        [WebGet(UriTemplate = "File/{fileName}/{fileExtension}")]
-        Stream downloadFile(string fileName, string fileExtension);
+        [WebGet(UriTemplate = "downloadFile/{fileName}")]
+        Stream downloadFile(string fileName);
+
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
