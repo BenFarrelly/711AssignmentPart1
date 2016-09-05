@@ -1,0 +1,11 @@
+C:\711\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\711\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\711\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\711\WindowsFormsApplication2\bin\Debug\CacheService.dll
+C:\711\WindowsFormsApplication2\bin\Debug\CacheService.pdb
+C:\711\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache

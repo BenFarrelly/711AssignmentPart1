@@ -53,9 +53,9 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             //TODO: Change implementation to use list of filenames!
-            //Create webclient that sends http request to http://localhost:8080/GetAvailableFilenames
+            //Create webclient that sends http request to http://localhost:8099/GetAvailableFilenames
             //Once the list has been returned, populate the listBox in form2
-
+            //Available files, directly query server.
             string getFilesUrl = "http://localhost:8080/Service1.svc/GetAvailableFilenames" ;
             //opens new window-
             WebRequest addRequest = WebRequest.Create(getFilesUrl);
@@ -81,10 +81,11 @@ namespace WindowsFormsApplication1
         private void listBox_Click(object sender, EventArgs e)
         {
             //This gives us the item name we want to download!
-            //Extract the name and then send the request to http://localhost:8080/Service1.svc/DownloadFile?fileName={filename}
+            //Extract the name and then send the request to http://localhost:8099/Service1.svc/DownloadFile/{filename}
             var item = listBox1.SelectedItem;
             //Set up the request
-            WebRequest request = WebRequest.Create("http://localhost:8080/Service1.svc/downloadFile/" + item);
+            WebRequest request = WebRequest.Create(
+                "http://localhost:8099/Service1.svc/downloadFile/" + item);
             request.Method = "GET";
             //Send request
             WebResponse response = request.GetResponse();
@@ -107,6 +108,7 @@ namespace WindowsFormsApplication1
             //before showing the result, write the file to disk
             string path = "C:\\711\\downloaded\\"
                 + (string)filename;
+            //TODO: Change implementation to use: WriteAllBytes
             System.IO.File.WriteAllText(path, result);
             //To check if write was successfull
             if (File.Exists(path)){

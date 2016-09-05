@@ -1,0 +1,6 @@
+C:\711\CacheService\bin\CacheService.dll.config
+C:\711\CacheService\bin\CacheService.dll
+C:\711\CacheService\bin\CacheService.pdb
+C:\711\CacheService\obj\Debug\CacheService.dll
+C:\711\CacheService\obj\Debug\CacheService.pdb
+C:\711\CacheService\obj\Debug\CacheService.csprojResolveAssemblyReference.cache
